@@ -9,9 +9,22 @@
     <script src="js/cropper.js"></script>
 </head>
 <body>
-<div class="box">
-    <img src="img/zdy.jpeg" alt="" id="image">
+<label for="uploadImg" class="labelImg">上传图片</label>
+<input type="file" id="uploadImg" style="display:none;"/>
+
+<div class="parent">
+    <div class="box">
+        <img src="" alt="" id="image">
+    </div>
+    <div class="preview"></div>
 </div>
+<hr/>
+<p>图片生成区</p>
+<div>
+    <canvas id="imgDone">抱歉，您的浏览器不支持画布</canvas>
+</div>
+
+
 <script src="js/demo.js"></script>
 </body>
 </html>
