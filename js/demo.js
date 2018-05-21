@@ -1,14 +1,6 @@
 /**
  * Created by Administrator on 2018/5/11.
  */
-//$('#image').cropper({
-//    aspectRatio: 1,
-//    viewMode:0,
-//    preview:".preview",
-//    crop: function (e) {
-//        //console.log(e);
-//    }
-//});
 var URL = window.URL || window.webkitURL;
 $("#uploadImg").on("change",function(){
     var files=this.files;
@@ -26,8 +18,16 @@ $("#uploadImg").on("change",function(){
                 console.log(imgSrc);
 
                 // 改变img的src属性值
-                $("#image").src=imgSrc;
+                $("#image").attr("src",imgSrc);
                 //imgObj.src=src;
+                $('#image').cropper({
+                    aspectRatio: 1,
+                    viewMode:0,
+                    preview:".preview",
+                    crop: function (e) {
+                        //console.log(e);
+                    }
+                });
 
         }
     }
